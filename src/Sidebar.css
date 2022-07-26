@@ -1,0 +1,51 @@
+.sidebar{  /*35 percent would be used by the header containing the avatar and status
+            and the other 65 percent would contain tne message section*/
+    display: flex;
+    flex-direction:column ;
+    flex: 0.35;  
+}
+.sidebar_search{
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 40px;
+    padding: 10pxS;
+}
+
+.sidebar_searchContainer{
+align-items: center;
+background-color: white;
+height: 35px;
+width: 100%;
+border-radius: 20px;
+}
+/*.sidebar_searchContainer > .MuiSvgIcon-root{
+    color: gray;
+}
+.sidebar_searchContainer > input{
+    border:#f6f6f6;
+    margin-left: 10px;
+}*/
+
+
+
+
+.sidebar_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-right: 1px solid lightgray;
+    
+}
+.sidebar_headerRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 10vw;
+}
+
+.sidebar_chats{   
+    flex: 1;
+    background-color: white;
+    overflow: scroll;   
+}  /*overflow will control if anything is going out of bounds and prevent them with giving us the scroll bar*/
