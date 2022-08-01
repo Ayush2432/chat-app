@@ -19,7 +19,7 @@ function Chat()  {
       e.preventDefault();
       console.log("you typed>>>>",input)  //this we have only used as a proof that the message we entered to submit is being stored in local storage
 
-       //setInput(""); //what it does is whenever we hit enter button the placeholder will get cleared itself 
+       setInput(""); //what it does is whenever we hit enter button the placeholder will get cleared itself 
     };
 
     return (

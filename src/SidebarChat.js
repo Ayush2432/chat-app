@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './SidebarChat.css';
 import { Avatar, IconButton } from '@mui/material';
+import db from "./firebase";
 
 
-
-function SidebarChat  ({addNewChat})  {
+function SidebarChat  ({id,name,addNewChat})  {
     const [seed,setSeed]= useState("");
 
     useEffect(()=>{
@@ -15,7 +15,11 @@ function SidebarChat  ({addNewChat})  {
       const roomName=prompt("Please enter the name for chat");
 
       if(roomName){
-        //do some database stuff
+        //do some database stuff it actually collects the database from the rooms we created in firebase is a room name is entered add that roomname
+        //in short retrieves rooms from database
+        db.collection('rooms').add({
+          name:roomName,
+        });
       }
     };
 
@@ -25,7 +29,7 @@ function SidebarChat  ({addNewChat})  {
          <div className='sidebarChat'>
          <IconButton><Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/></IconButton>  
          <div className='sidebarChat_info'>
-         <h2>Rooom Name</h2>
+         <h2>{name}</h2>
          <p>Last Message.....</p>
 
          </div> 
